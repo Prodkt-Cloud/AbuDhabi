@@ -7,9 +7,17 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:css": "tailwindcss -c ./full.config.cjs -i ./src/styles/global.scss --full -o ./public/styles/abudhabi.css"
   },
   "dependencies": {
-    "astro": "^2.0.18"
+    "@astrojs/tailwind": "^3.0.1",
+    "astro": "^2.0.18",
+    "Prodkt-Tokens-Radix": "file:../../prodkt-tokens-radix",
+    "prodkt-typography": "file:../../prodkt-typography",
+    "tailwindcss": "^3.2.7"
+  },
+  "devDependencies": {
+    "sass": "^1.58.3"
   }
 }
