@@ -1,0 +1,789 @@
+
+:root {
+    --tovuti-base: var(--color-mint-light-1);
+    --tovuti-base-inverted: var(--color-mauve-light-12);
+    --tovuti-primary: var(--color-tomato-light-9);
+    --tovuti-header-padding: .75rem;
+    --tovuti-menu-item-padding: .75rem;
+    --tovuti-text: var(--color-mauve-light-12);
+    --tovuti-text-inverted: var(--color-mauve-light-3);
+    --tovuti-card-radius: .5rem;
+    --tovuti-card-border: var(--color-mauve-light-alpha-3);
+    --tovuti-transparent: rgba(0,0,0,0);
+    
+    
+    --size: clamp(0rem, 0rem + 0vmin, 0rem);
+    --gap: calc(var(--size) / 14);
+    --duration: 60s;
+    --duration-row2: 100s;
+    --scroll-start: 0;
+    --scroll-start-row2: 0%;
+    --scroll-end: calc(-100% - var(--gap));
+    --scroll-end-row2: calc(-100% - var(--gap));
+}
+
+body {
+    background-color: var(--tovuti-base) !important;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div {
+    font-family: 'abu-dhabi', sans-serif !important;
+}
+
+body#top>header#header-wrap {
+    height: auto !important;
+    color: var(--tovuti-text-inverted);
+    background-color: var(--tovuti-base-inverted);
+    box-shadow: none !important;
+}
+
+header#header-wrap>div.logo_box {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+/* ACCESSIBILITY - NO STYLING NECESSARY */
+header#header-wrap>div.logo_box>a {}
+
+/* MENU TOGGLE */
+header#header-wrap>div.logo_box>a+button#menu-toggle {
+    background-color: var(--tovuti-primary) !important;
+    padding: var(--tovuti-header-padding) calc(var(--tovuti-header-padding) * 2);
+    align-items: center !important;
+    justify-content: center;
+    float: none;
+    top: 0 !important;
+    bottom: 0;
+    margin: auto !important;
+    color: white !important;
+    width: auto;
+}
+
+header#header-wrap>div.logo_box>a+button#menu-toggle+span>img#dash_logo.mobile-hidden {
+    min-height: 100% !important;
+    max-height: 56px !important;
+    max-width: auto !important;
+    height: 100% !important;
+    width: auto;
+    margin-left: auto !important;
+    padding: var(--tovuti-header-padding);
+
+}
+
+header#header-wrap>div.logo_box+div.moduletable.notifications, header#header-wrap>div.logo_box+div.moduletable .notifications {
+    display: flex;
+    align-items: stretch;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    align-self: stretch;
+    padding: auto !important;
+    padding-right: auto !important;
+    padding-left: auto !important;
+    right: auto !important;
+    left: auto !important;
+    height: auto !important;
+    max-width: auto !important;
+    min-width: auto !important;
+    width: auto !important;
+}
+
+
+header#header-wrap>div.logo_box+div.moduletable.notifications>div.joms-notifications {
+    background-color: inherit !important;
+    display: flex !important;
+    width: auto !important;
+    left: auto !important;
+    right: auto !important;
+    padding: auto !important;
+}
+
+header#header-wrap>div.logo_box+div.moduletable.notifications>div.joms-notifications a {
+    padding: var(--tovuti-header-padding) calc(var(--tovuti-header-padding) * 2) !important;
+    align-content: center;
+    align-self: stretch;
+    display: flex !important;
+}
+
+header#header-wrap>div.logo_box+div.moduletable.notifications>div.joms-notifications a>i {
+    margin: auto !important;
+}
+
+header#header-wrap>div.logo_box+div.moduletable.notifications>a {
+    padding: var(--tovuti-header-padding) calc(var(--tovuti-header-padding) * 2) !important;
+    align-self: stretch;
+    align-content: center;
+    height: 100%;
+    display: flex !important;
+}
+
+header#header-wrap>div.logo_box+div.moduletable+div.set-right.right-profile {
+    display: inline-flex;
+    align-self: stretch;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--tovuti-primary) !important;
+    right: auto !important;
+    left: auto !important;
+    float: none !important;
+    margin: 0 0 0 0 !important;
+    padding: var(--tovuti-header-padding);
+    color: inherit !important;
+    cursor: pointer;
+    position: relative !important;
+}
+
+header#header-wrap>div.logo_box+div.moduletable+div.set-right {
+}
+
+header#header-wrap>div.logo_box+div.moduletable+div.set-right.right-profile>div#card_info {
+    margin: auto !important;
+    color: inherit !important;
+}
+
+header#header-wrap>div.logo_box+div.moduletable+div.set-right.right-profile>div#my-account.dropdowns {
+    margin: auto !important;
+    left: auto !important;
+    right: auto !important;
+    align-self: center !important;
+    padding: 0 0 0 0;
+    float: none !important;
+    color: inherit !important;
+    padding: var(--tovuti-header-padding) !important;
+}
+
+header#header-wrap>div.logo_box+div.moduletable+div.set-right.right-profile>div#my-account.dropdowns>a.dropdown-toggles,
+
+header#header-wrap>div.logo_box+div.moduletable+div.set-right.right-profile>div#my-account.dropdowns>a.dropdown-toggles:hover {
+    color: inherit;
+}
+
+header#header-wrap>div.logo_box+div.moduletable+div.set-right.right-profile>div#my-account.dropdowns>a.dropdown-toggles>span.top-dropdown {
+    color: inherit !important;
+}
+
+
+#main-content>style {
+    display: none;
+    visibility: hidden;
+}
+
+/* Container 1 for the custom Tovuti module that houses the Event Cards in Row 1 */
+#main-content>div:first-of-type {
+}
+
+/* Wrapper 1 for the Custom Tovuti Module that houses the Event Cards in Row 1 */
+#main-content>div:first-of-type>div#dash_module_0 {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+/* Container 2 for the Custom Tovuti Module that houses the Event Cards in Row 1 */
+#main-content>div:first-of-type>div#dash_module_0>div+div.zone_module_container>article.moduletable {}
+
+#main-content>div:first-of-type>div#dash_module_0>div.dashboard_title_bar+div.zone_module_container>article.moduletable>link,
+#main-content>div:first-of-type>div#dash_module_0>div.dashboard_title_bar+div.zone_module_container>article.moduletable>style {
+}
+
+#main-content>div:first-of-type>div#dash_module_0>div.dashboard_title_bar+div.zone_module_container>article.moduletable {}
+
+
+
+body#top > header + div#wrapper > div#sidebar-wrapper {
+    box-shadow: none;
+    background-color: var(--tovuti-base-inverted) !important;
+    display: flex;
+    align-items: stretch !important;
+    justify-content: center !important;
+    position: fixed;
+    max-height: 100vh;
+    padding: auto auto auto auto !important;
+    margin: auto !important;
+    overflow-y: scroll;
+    left: 0;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper > div.nano {
+    align-self: stretch !important;
+    width: 100%;
+    background-color: var(--tovuti-base-inverted);
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper > div.nano > div.nano-content {
+    right: auto !important;
+    left: 0;
+    margin: auto auto auto auto !important;
+    padding: 0 0 0 0 !important;
+    position: relative;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper > div.nano > div.nano-content > nav#primary-menu {
+}
+body#top > header + div#wrapper > div#sidebar-wrapper > div.nano > div.nano-content > nav#primary-menu > div.moduletable {
+    
+}
+body#top > header + div#wrapper > div#sidebar-wrapper > div.nano > div.nano-content > nav#primary-menu > div.moduletable > ul.sidemenu {
+}
+body#top > header + div#wrapper > div#sidebar-wrapper > div.nano > div.nano-content > nav#primary-menu > div.moduletable > ul.sidemenu > li {
+}
+body#top > header + div#wrapper > div#sidebar-wrapper > div.nano > div.nano-content > nav#primary-menu > div.moduletable > ul.sidemenu > li > a {
+    color: var(--tovuti-text-inverted);
+    padding: calc(var(--tovuti-menu-item-padding) * 2);
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper > div.nano > div.nano-content > nav#primary-menu > div.moduletable > ul.sidemenu > li > a:hover {
+    background-color: var(--color-mint-light-11);
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper div#page-content-wrapper {
+    background-color: var(--tovuti-base);
+    padding: 0 0 0 0;
+    margin-top: 60px;
+    box-shadow: none !important;
+    border: 0 solid rgba(0,0,0,0) !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content {
+    background-color: var(--tovuti-base);
+    padding: 0 0 !important;
+    box-shadow: none !important;
+    border: 0 solid rgba(0,0,0,0) !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 {
+    padding: 0 0 0 0;
+    border: 0 solid rgba(0,0,0,0);
+    background-color: var(--tovuti-base);
+    box-shadow: none !important;
+    border: 0 solid rgba(0,0,0,0) !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module {
+	padding: 0 0 0 0 !important;
+	background-color: var(--tovuti-base);
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 {
+    padding: 0px 0px;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_1 + div.zone_module_container,
+
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container {
+    padding: 0 0 0 0;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1 + div.zone_module_container > article.moduletable,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container > article.moduletable {
+    padding: 0 0 0 0;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable {
+    padding: 0 0 0 0;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable > link,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1 + div.zone_module_container > article.moduletable > link,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container > article.moduletable > script {
+    display: none !important;
+    visibility: hidden;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable > div.tov-content-container,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1 + div.zone_module_container > article.moduletable > div.tov-content-container,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container > article.moduletable > div.tov-content-container
+
+/* body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container */ {
+}
+
+/* EVENT CARD CONTAINER */
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content
+
+/*
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content */ {
+    gap: 1rem;
+    margin: auto !important;
+}
+
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card
+
+/*
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card */ {
+    padding: 0 0 0 0 !important;
+    margin: auto auto auto auto !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: 0px solid var(--tovuti-card-border) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    background-color: var(--tovuti-transparent);
+    gap: 1rem;
+    max-width: auto !important;
+    min-width: calc(50% - 1rem);
+    flex-wrap: nowrap;
+    margin-right: 0 !important;
+    height: 100% !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.ml-card-image,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.ml-card-image,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.ml-card-image
+ {
+    max-width: calc(50% - 1rem) !important;
+    left: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+    border-radius: .75rem !important;
+    align-self: stretch;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper
+/*
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper */ {
+    max-width: calc(50% - 1rem) !important;
+    width: 100% !important;
+    flex-grow: 1;
+    background-color: var(--tovuti-primary) !important;
+    border-radius: var(--tovuti-card-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start !important;
+    align-self: stretch;
+    overflow: hidden;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper div[name="Card Buttons"],
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper div[name="Card Buttons"],
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper div[name="Card Buttons"]
+ /*
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper div[name="Card Buttons"] */ {
+    margin-top: auto;
+    margin-bottom: 0 !important;
+    border: 0px solid transparent !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper > .text-body,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_1.dashboard_module > div#dash_module_title_1 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper > .text-body,
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_2.dashboard_module > div#dash_module_title_2 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper > .text-body
+/*
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.funkWrapper > .text-body
+*/ {
+    color: var(--tovuti-text-inverted) !important;
+    margin-top: 0 !important;
+    margin-bottom: auto !important;
+}
+
+#dash_module_0 > div.zone_module_container > article > div > div > div > div.funkWrapper > div.bottom-blog.d-inline-flex.justify-content-between.align-items-center.w-100.bg-dark.event-date.p-2,
+#dash_module_1 > div.zone_module_container > article > div > div > div > div.funkWrapper > div.bottom-blog.d-inline-flex.justify-content-between.align-items-center.w-100.bg-dark.event-date.p-2,
+#dash_module_2 > div.zone_module_container > article > div > div > div > div.funkWrapper > div.bottom-blog.d-inline-flex.justify-content-between.align-items-center.w-100.bg-dark.event-date.p-2
+/*
+#dash_module_3 > div.zone_module_container > article > div > div > div > div.funkWrapper > div.bottom-blog.d-inline-flex.justify-content-between.align-items-center.w-100.bg-dark.event-date.p-2 */ { 
+    background-color: var(--tovuti-transparent) !important;
+    padding-left: 1rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 0 !important;
+    margin: auto auto auto auto;
+    
+}
+
+#dash_module_0 > div.zone_module_container > article > div > div > div > div.funkWrapper > div.text-body,
+
+#dash_module_1 > div.zone_module_container > article > div > div > div > div.funkWrapper > div.text-body,
+
+#dash_module_2 > div.zone_module_container > article > div > div > div > div.funkWrapper > div.text-body
+/*
+#dash_module_3 > div.zone_module_container > article > div > div > div > div.funkWrapper > div.text-body */ {
+    margin: auto auto auto auto;
+    text-align: left;
+}
+
+div[name="Card Buttons"], div[name="Card Buttons"] > a, #dash_module_0 > div  > a {
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    background-color: var(--tovuti-primary) !important;
+    background: none !important;
+    border: 0 solid transparent !important;
+}
+
+div[name="Card Buttons"], div[name="Card Buttons"] > a:hover, #dash_module_0 > div  > a:hover {
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    background-color: var(--tovuti-primary) !important;
+    background: none !important;
+    border: 0 solid transparent !important;
+}
+
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_4.dashboard_module .ml-card {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
+  perspective: 1000px;
+}
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_4.dashboard_module body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_4.dashboard_module .ml-card:hover {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
+  perspective: 1000px;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content {
+    height: 100% !important;
+    max-height: 90vh !important;
+    width: 100% !important;
+    position: relative !important;
+    padding: 8rem 4rem 8rem 65% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    background-color: black !important;
+ border-radius: 1rem !important;
+ overflow: hidden !important;
+}
+
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > .ml-card:first-of-type {
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    height: 100% !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+    margin: 0 0 0 0 !important;
+    z-index: 0;
+    justify-content: center !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > .ml-card:first-of-type > div.ml-card-image {
+ position: absolute !important;   
+ width: 100%;
+ height: 100%;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > .ml-card:first-of-type > .funkWrapper {
+    max-width: 50% !important;
+    height: auto !important;
+    z-index: 10;
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+}
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > .ml-card:first-of-type > .funkWrapper > .funkWrapper {
+    
+    justify-content: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: start !important;
+    margin-top: auto !important;
+    margin-bottom: auto !important;
+    height: auto !important;
+    padding: 4rem;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > .ml-card:first-of-type > .funkWrapper > .funkWrapper > div.bottom-blog {
+    background-color: transparent !important;
+    
+    
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > .ml-card:first-of-type > .funkWrapper > .funkWrapper a {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > .ml-card:first-of-type > .funkWrapper > .funkWrapper > div.text-body {
+    color: white !important;
+    max-width: auto !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > .funkWrapper {
+    height: 100% !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: calc(80vh - 16rem);
+    width: 100% !important;
+    z-index: 50 !important;
+}
+
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content .funkWrapper > div.ml-card {
+    background-color: rgba(0,0,0,.8) !important;
+    color: white !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content .funkWrapper > div.ml-card > .ml-card-image {
+    display: none;
+}
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content .funkWrapper > div.ml-card > .funkWrapper > .funkWrapper > div[name="Card Text"].text-body {
+    color: white !important;
+}
+
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_0.dashboard_module > div#dash_module_title_0 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > .funkWrapper > .funkWrapper > div[name="Card Buttons"] {
+    display: none !important;
+}
+
+#dash_module_title_3 {
+    height: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    font-size: 4rem !important;
+    margin: auto auto !important;
+    color: var(--tovuti-primary);
+    padding: auto 1rem !important;
+    text-align: center !important; 
+}
+
+div.p-3.pt-0.d-flex.mt-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+div.tov-ml-content {
+    padding: 2rem !important;
+}
+
+
+/* HORIZONTAL SCROLLING OF CARDS */
+
+  div#dash_module_0 .tov-content-container,  div#dash_module_1 .tov-content-container {
+    display: grid !important;
+    align-content: center !important;
+    overflow: hidden;
+    gap: var(--gap);
+    min-width: 100%;
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+  
+  
+  #dash_module_0 .tov-ml-content {
+    display: flex !important;
+    user-select: none !important;
+    justify-content: space-around !important;
+    gap: 0 !important;
+    min-width: 100% !important;
+    animation: scroll-x var(--duration) linear infinite !important;
+    flex-wrap: nowrap !important;
+    padding: .5rem 0 !important;
+  }
+  
+  
+  #dash_module_1 .tov-ml-content {
+    display: flex !important;
+    user-select: none !important;
+    justify-content: space-around !important;
+    gap: 0 !important;
+    min-width: 100% !important;
+    animation: scroll-x-row2 var(--duration-row2) linear infinite !important;
+    flex-wrap: nowrap !important;
+    padding: .5rem 0 !important;
+  }
+  
+  
+  @media (prefers-reduced-motion: reduce) {
+      div#dash_module_0 .tov-ml-content,
+      div#dash_module_1 .tov-ml-content {
+      animation-play-state: paused;
+    }
+  }
+  
+    div#dash_module_0 .tov-ml-content {
+    animation-name: scroll-y;
+  }
+  
+    div#dash_module_1 .tov-ml-content {
+    animation-name: scroll-y-row2;
+  }
+  
+    div#dash_module_0 .tov-ml-content {
+    animation-direction: reverse;
+    animation-delay: -3s;
+  }
+  
+    div#dash_module_1 .tov-ml-content {
+    animation-direction: reverse;
+    animation-delay: -3s;
+  }
+  
+  @keyframes scroll-x {
+    from {
+      transform: translateX(var(--scroll-start));
+    }
+    to {
+      transform: translateX(var(--scroll-end));
+    }
+  }
+  
+  @keyframes scroll-y {
+    from {
+      transform: translateY(var(--scroll-start));
+    }
+    to {
+      transform: translateY(var(--scroll-end));
+    }
+  }
+  
+  @keyframes scroll-x-row2 {
+    from {
+      transform: translateX(var(--scroll-start-row2));
+    }
+    to {
+      transform: translateX(var(--scroll-end-row2));
+    }
+  }
+  
+  @keyframes scroll-y-row2 {
+    from {
+      transform: translateY(var(--scroll-start-row2));
+    }
+    to {
+      transform: translateY(var(--scroll-end-row2));
+    }
+  }
+  
+    div#dash_module_0 .ml-card,    div#dash_module_1 .ml-card {
+    flex-shrink: auto !important;
+    flex-grow: 1 !important;
+    place-items: center;
+    width: auto !important;
+    min-width: 100% !important;
+    max-width: auto !important;
+  }
+  
+    div#dash_module_0 .ml-card-image,    div#dash_module_1 .ml-card-image {
+    height: 100% !important;
+    min-height: 100% !important;
+      align-self: stretch !important;
+      min-width: 400px !important;
+  }
+  
+    div#dash_module_0 .ml-card .funkWrapper,    div#dash_module_1 .ml-card .funkWrapper {
+    height: 100% !important;
+    min-height: 100% !important;
+      min-width: 400px !important;
+      position: relative !important;
+  }
+  
+    div#dash_module_0 .ml-card .event-title,    div#dash_module_1 .ml-card .event-title {
+      width: 100% !important;
+      min-width: 100% !important;
+      max-width: 500px !important;
+      overflow: hidden;
+        white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: left !important;
+      margin-left: 0 !important;
+      margin-right: auto !important;
+  }
+  
+  
+.tov-ml-content {
+    -webkit-animation-play-state: paused !important;
+    animation-play-state: paused !important;
+}
+  
+//   body { display: none !important; }
+
+body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.ml-card-image:before {
+    position: absolute !important;
+    background-color: rgba(76,77,117, 0.6) !important;
+    width: 100% !important;
+    height: 100% !important;
+    content: '';
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/*width*/
+.funkWrapper::-webkit-scrollbar {
+  width:16px;
+}
+
+/*track*/
+.funkWrapper::-webkit-scrollbar-track {
+  background:black;
+  border-style:solid;
+  border-radius: 0 12px 12px 0;
+  border: 1px solid rgba(255,255,255,.1) !important;
+}
+
+/*thumb*/
+.funkWrapper::-webkit-scrollbar-thumb {
+  background:rgba(255, 255, 255, .5);
+  border-style:solid;
+  border-radius: 0 12px 12px 0;
+}
+
+
+#dash_module_5 {
+ background-color: var(--color-mauve-light-4) !important;   
+}
+
+#dash_module_5 h1 {
+    color: var(--tovuti-primary) !important;
+}
+
+#dash_module_5 img {
+    border-radius: 1.5rem;
+    margin-top: 1rem;
+    transform: rotate(4deg);
+    box-shadow: 10px 10px 10px -1px rgba(0, 0, 0, 0.2);
+}

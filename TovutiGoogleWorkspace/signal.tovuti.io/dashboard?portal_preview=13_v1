@@ -1,0 +1,3113 @@
+<!DOCTYPE html>
+<html xmlns:jdoc="http://www.w3.org/2001/XInclude" xml:lang="en-gb" lang="en-gb">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- REMOVE forces inaccessibility - should never have been here -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-title" content="AXS">
+	<link rel="apple-touch-icon" href="/graphics/icon.png" />
+	<link href="/graphics/icon.png"
+		media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
+		rel="apple-touch-startup-image">
+	<link href="/graphics/icon.png"
+		media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+		rel="apple-touch-startup-image">
+	<!-- REMOVE no need to load Open Sans as we host our own font shown by default and over-ride with customer font -->
+	<!-- <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' /> -->
+
+	<meta name="apple-mobile-web-app-title" content="Signal">
+	<link rel="apple-touch-icon" sizes="180x180"
+		href="/https://signal-prodkt.vercel.app/media/images/logos/signal_logomark.svg">
+	<link rel="icon" href="/https://signal-prodkt.vercel.app/media/images/logos/signal_logomark.svg"
+		type="image/x-icon">
+
+	<base href="https://signal.tovuti.io/dashboard" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Dashboard</title>
+	<link href="/?portal_preview=13&amp;format=feed&amp;type=rss" rel="alternate" type="application/rss+xml"
+		title="RSS 2.0" />
+	<link href="/?portal_preview=13&amp;format=feed&amp;type=atom" rel="alternate" type="application/atom+xml"
+		title="Atom 1.0" />
+	<link href="/plugins/system/jcemediabox/css/jcemediabox.css?1d12bb5a40100bbd1841bfc0e498ce7b" rel="stylesheet"
+		type="text/css" />
+	<link href="/plugins/system/jcemediabox/themes/squeeze/css/style.css?904d706a133c73eabd5311fc39fa401b"
+		rel="stylesheet" type="text/css" />
+	<link href="/templates/axs/css/tov-style/learner/lp-header.css?40f9943055ad5a89868c07dfb5eb14fb" rel="stylesheet"
+		type="text/css" />
+	<link href="/templates/axs/css/styles.css?9bc2f72d8f131c29f06deacb81d2ad85" rel="stylesheet" type="text/css" />
+	<link
+		href="/components/com_community/assets/vendors/magnific-popup/magnific-popup.css?bbed16924f19142e9f31a234fac20154"
+		rel="stylesheet" type="text/css" />
+	<link href="/components/com_community/assets/release/css/override.css?43b8a2609fbac2a6e71b4b0ab9384ed4"
+		rel="stylesheet" type="text/css" />
+	<link href="/components/com_community/templates/jomsocial/assets/css/old.css?f8e34a8339503012b9e934f48232fb15"
+		rel="stylesheet" type="text/css" />
+	<link href="/components/com_community/templates/jomsocial/assets/css/style.css?3c4c1a166169adafd39d64b00e82d176"
+		rel="stylesheet" type="text/css" />
+	<link href="/modules/mod_community_notifications/style.css" rel="stylesheet" type="text/css" />
+	<script type="application/json"
+		class="joomla-script-options new">{"system.paths":{"root":"","base":""},"system.keepalive":{"interval":300000,"uri":"\/component\/ajax\/?format=json"}}</script>
+	<script src="/plugins/system/axsusers/axsusers.js" type="text/javascript"></script>
+	<script src="/plugins/system/jcemediabox/js/jcemediabox.js?0c56fee23edfcb9fbdfe257623c5280e"
+		type="text/javascript"></script>
+	<script src="/media/jui/js/jquery.min.js?dc5e7f18c8d36ac1d3d4753a87c98d0a" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?79b4956b7ec478ec10244b5e2d33ac7d" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap-legacy/bootstrap-transition.min.js?4becdc9104623e891fbb9d38bba01be4"
+		type="text/javascript"></script>
+	<script src="//cdn.embedly.com/widgets/platform.js" type="text/javascript"></script>
+	<script src="/components/com_community/assets/release/js/loader.js?c4c5ea3e80926decfd195ea67e7a8ef1"
+		type="text/javascript"></script>
+	<script src="/components/com_community/assets/release_32/js/bundle.js?97ca11c6648cabc327a684121bb2baed"
+		type="text/javascript"></script>
+	<script src="/components/com_community/assets/vendors/toolkit.min.js?6b53600feae548d58a20a83deef96814"
+		type="text/javascript"></script>
+	<script src="/media/system/js/core.js?97681b6f6a1902affb28efabf679e849" type="text/javascript"></script>
+	<!--[if lt IE 9]><script src="/media/system/js/polyfill.event.js?13405d49674966eacac70fe8d230f349" type="text/javascript"></script><![endif]-->
+	<script src="/media/system/js/keepalive.js?5952c62bfa0a4f4e03ece5051c5a6938" type="text/javascript"></script>
+	<script type="text/javascript">
+
+		JLANGUAGE = 'en-GB';
+		JLANGUAGE_RTL = false;
+
+		JCEMediaBox.init({ popup: { width: "", height: "", legacy: 0, lightbox: 0, shadowbox: 0, resize: 1, icons: 1, overlay: 1, overlayopacity: 0.8, overlaycolor: "#000000", fadespeed: 500, scalespeed: 500, hideobjects: 1, scrolling: "fixed", close: 2, labels: { 'close': 'Close', 'next': 'Next', 'previous': 'Previous', 'cancel': 'Cancel', 'numbers': '{$current} of {$total}' }, cookie_expiry: "", google_viewer: 0 }, tooltip: { className: "tooltip", opacity: 0.8, speed: 150, position: "br", offsets: { x: 16, y: 16 } }, base: "/", imgpath: "plugins/system/jcemediabox/img", theme: "squeeze", themecustom: "", themepath: "plugins/system/jcemediabox/themes", mediafallback: 0, mediaselector: "audio,video" });
+		function do_nothing() { return; }
+		joms_base_url = 'https://signal.tovuti.io/';
+		joms_assets_url = '/components/com_community/assets/';
+		joms_script_url = '/components/com_community/assets/_release/js/';
+		joms_lang = { "COM_COMMUNITY_PHOTO_DONE_TAGGING": "Done tagging", "COM_COMMUNITY_SEARCH": "Search", "COM_COMMUNITY_NO_COMMENTS_YET": "No comments yet.", "COM_COMMUNITY_NO_LIKES_YET": "No comments yet.", "COM_COMMUNITY_SELECT_ALL": "Select All", "COM_COMMUNITY_UNSELECT_ALL": "Unselect All", "COM_COMMUNITY_SHOW_MORE": "Show more", "COM_COMMUNITY_SHOW_LESS": "Show less", "COM_COMMUNITY_FILES_LOAD_MORE": "Load More Files", "COM_COMMUNITY_INVITE_LOAD_MORE": "Load More Friends", "COM_COMMUNITY_PRIVACY_PUBLIC": "Public", "COM_COMMUNITY_PRIVACY_SITE_MEMBERS": "Site Members", "COM_COMMUNITY_PRIVACY_FRIENDS": "Friends", "COM_COMMUNITY_PRIVACY_ME": "Only Me", "COM_COMMUNITY_MOVE_TO_ANOTHER_ALBUM": "Move to another album", "COM_COMMUNITY_POPUP_LOADING": "Loading...", "COM_COMMUNITY_CLOSE_BUTTON": "Close", "COM_COMMUNITY_SELECT_FILE": "Select file", "COM_COMMUNITY_AUTHENTICATION_KEY": "Authentication key", "COM_COMMUNITY_NEXT": "Next", "COM_COMMUNITY_SKIP_BUTTON": "Skip", "COM_COMMUNITY_AUTHENTICATION_KEY_LABEL": "Insert your two-factor authentication key", "COM_COMMUNITY_NO_RESULT_FOUND": "No result found.", "COM_COMMUNITY_OF": "of", "COM_COMMUNITY_EDITING_GROUP": "COM_COMMUNITY_EDITING_GROUP", "COM_COMMUNITY_CHANGE_GROUP_OWNER": "COM_COMMUNITY_CHANGE_GROUP_OWNER", "COM_COMMUNITY_CONFIGURATION_IMPORT_GROUPS": "COM_COMMUNITY_CONFIGURATION_IMPORT_GROUPS", "COM_COMMUNITY_CONFIGURATION_IMPORT_USERS": "COM_COMMUNITY_CONFIGURATION_IMPORT_USERS", "COM_COMMUNITY_EDITING_PHOTO": "COM_COMMUNITY_EDITING_PHOTO", "COM_COMMUNITY_VIEW_PHOTO": "COM_COMMUNITY_VIEW_PHOTO", "COM_COMMUNITY_EDITING_VIDEO": "COM_COMMUNITY_EDITING_VIDEO", "COM_COMMUNITY_VIEW_VIDEO": "COM_COMMUNITY_VIEW_VIDEO", "COM_COMMUNITY_SHOW_PREVIOUS_COMMENTS": "Show previous comments", "wysiwyg": { "viewHTML": "View HTML", "bold": "Bold", "italic": "Italic", "underline": "Underline", "orderedList": "Ordered list", "unorderedList": "Unordered list", "link": "Link", "createLink": "Insert link", "unlink": "Remove link", "image": "Image", "insertImage": "Insert image", "description": "Description", "title": "Title", "text": "Text", "submit": "Confirm", "reset": "Cancel" } };
+		joms_my_id = 1620267;
+		joms_user_id = 1620267;
+		joms_my_id = 1620267;
+		joms_user_id = 1620267;
+	</script>
+	<script type='text/javascript'>
+		/*<![CDATA[*/
+		var jax_live_site = 'https://signal.tovuti.io/index.php/dashboard?portal_preview=13/';
+		var jax_token_var = '6264ee641da771c42ce4e8a5e2d89467';
+                /*]]>*/
+	</script>
+	<script type="text/javascript" src="/plugins/system/jomsocial.system/pc_includes/ajax_1.5.pack.js"></script>
+
+
+
+
+	<link rel="stylesheet" href="/templates/axs/css/bootstrap.css?v=8">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+	<script type="text/javascript" src="//code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/assets/scroll/jquery.nanoscroller.js"></script>
+	<script type="text/javascript" src="/js/wcag-dropdown.js"></script>
+
+	<link rel="stylesheet" href="/templates/system/css/system.css?v=2" type="text/css" />
+	<link rel="stylesheet" href="/templates/axs/css/animate.css">
+	<link rel="stylesheet" href="/templates/axs/icons/style.css?v=39" type="text/css" />
+	<link rel="stylesheet" href="/templates/axs/css/styles.css?v=75" type="text/css" />
+	<link rel="stylesheet" href="/templates/axs/css/dashboard.css?v=7">
+	<script type="text/javascript" src="/templates/axs/js/dashboard.js?v=13"></script>
+
+	<style>
+		:root {
+			/* Tovuti Platform Default Theme */
+			--primary-color: #1e2935;
+			/* Tovuti Blue */
+
+		}
+	</style>
+
+
+
+
+
+
+	<script>
+		var sidebarWidth = "150px";
+		var sidebarStatus;
+		var mobile;
+
+		if ($(window).width() > 768) {
+			mobile = false;
+			sidebarStatus = "open";
+		} else {
+			mobile = true;
+			sidebarStatus = "closed";
+		}
+	</script>
+
+	<style>
+		body {}
+
+		#header-wrap {
+			height: 60px !important;
+			overflow: visible !important;
+		}
+
+		#card_info {
+			font-size: 20px;
+		}
+
+		#header-wrap a {}
+
+		#card_info_sub {
+			font-size: 15px;
+		}
+
+		#user_language_selector {
+			font-size: 20px;
+		}
+
+		#menu-toggle {
+			height: 60px !important;
+		}
+
+		.moduletable.notifications {
+			/* height: 60px !important; */
+		}
+
+		#my-account-menu {
+			top: 60px !important;
+			position: fixed;
+			margin-top: 4px;
+			margin-right: 16px;
+		}
+
+		#page-content-wrapper {
+			margin-left: 150px;
+			padding-top: 60px;
+		}
+
+		#sidebar-wrapper {
+			position: fixed;
+			width: 150px;
+			margin-top: 0px;
+			padding-top: 60px;
+		}
+
+		.navLabel {}
+
+		.submenu {}
+
+		.submenu li a span,
+		.submenu li a {}
+
+		.axsNav>a:hover {}
+
+		.submenu li a:hover {}
+
+		.lizicon {
+			.iconStyle {}
+
+			.dropdown-menu {}
+
+			.dashboard_module {}
+	</style>
+	<style>
+		@media(max-width:768px) {
+			/* #sidebar-wrapper {
+                width: 0px;
+            } */
+		}
+
+		@media(max-width:500px) {
+			.joms-notifications {
+				display: none;
+			}
+		}
+
+		@media(max-width:768px) {
+			/* #page-content-wrapper {
+                margin-left: 0px;
+            } */
+		}
+
+
+		#menu-toggle {
+			top: 12px;
+			left: 0px;
+			margin-right: 15px;
+		}
+
+
+		#my-account-menu,
+		#my-account-menu a {
+			color: #555;
+
+		}
+
+		#my-account-menu a:hover {
+			color: #0980f9;
+
+		}
+	</style>
+
+	<link rel="stylesheet" href="/media/player/plyr.css" />
+
+	<script
+		src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL,Math.trunc"
+		crossorigin="anonymous"></script>
+	<script src="/media/player/plyr.js?v=3"></script>
+	<script src="/media/player/tracking.js?v=3"></script>
+
+	<script>
+		const duration_data = "eyJvcHRpb24iOiJjb21fY29udGVudCIsInZpZXciOiJmZWF0dXJlZCIsIml0ZW1faWQiOjB9";
+	</script>
+	<script src="/media/tovuti/js/duration.js?v=8"></script>
+
+	<script src="https://js.stripe.com/v3/"></script>
+
+
+	<script src="https://kit.fontawesome.com/8c1112f2d0.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="top" class="">
+
+	<header id="header-wrap">
+		<div class="logo_box">
+			<a href="#main-content" class="sr-only" tabindex="-1">Skip to main content</a>
+			<button type="button" class="sideToggle" id="menu-toggle" aria-label="Menu" aria-haspopup="true"
+				aria-controls="primary-menu">
+				<i class="fa-solid fa-bars"></i>
+			</button>
+			<span>
+				<img id="dash_logo" class="mobile-hidden"
+					src="/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/2023/signal/signal-logo_modeonDark.png"
+					alt="signal logo modeonDark">
+			</span>
+		</div>
+		<div class="moduletable notifications">
+
+
+
+
+
+
+			<div class="joms-notifications">
+				<a title="Friend invites" aria-label="Friend Requests" href="/social/friends/pending"
+					onclick="joms.popup.notification.friend(); return false;">
+					<!-- REMOVE remove instances of lizicons used by tovuti - these are unapproved and should be deprecated throughout     -->
+					<!-- <span class="notification-icon lizicon-1-TEP-Connect-Icon-friendrequest"></span> -->
+					<i class="fa-solid fa-users"></i>
+				</a>
+				<a title="New messages" aria-label="Inbox" href="/my-inbox"
+					onclick="joms.popup.notification.pm(); return false;">
+					<!-- REMOVE remove instances of lizicons used by tovuti - these are unapproved and should be deprecated throughout     -->
+					<!-- <span class="notification-icon lizicon-1-TEP-Connect-Icon-myinbox"></span> -->
+					<i class="fa-solid fa-envelope"></i>
+				</a>
+				<a title="Global notifications" href="javascript:" aria-label="Notifications"
+					onclick="joms.popup.notification.global();">
+					<!-- REMOVE remove instances of lizicons used by tovuti - these are unapproved and should be deprecated throughout     -->
+					<!-- <span class="notification-icon lizicon-1-TEP-Connect-Icon-notification"></span> -->
+					<i class="fa-solid fa-bell"></i>
+				</a>
+			</div>
+
+		</div>
+
+
+
+
+
+		<div class="set-right right-profile">
+			<div id="card_info" class="hidden-xs" style="margin-right:10px;float:left;text-align:right;margin-top:18px">
+				<div>
+				</div>
+			</div>
+			<div id="my-account" class="dropdowns" style="float: left; margin-top: 5px;" data-step="14"
+				data-intro="This is your Account Menu" data-position="left">
+				<a class="dropdown-toggles" aria-haspopup="true" alt="This is your Account Menu" tabindex="0">
+					<span class="top-dropdown lizicon-1-TEP-Connect-Icon-dropdown"></span>
+				</a>
+				<ul id="my-account-menu" class="dropdown-menu dropdown-menu-right">
+					<li>
+						<a href="/administrator" target="_blank">
+							<span class="my-account-icon lizicon-1-TEP-Connect-Icon-administrator"></span>
+							<span class="my-account-label">Administrator Options</span>
+						</a>
+					</li>
+
+					<li data-step="15" data-intro="Go to your personal profile." data-position="left" role="none">
+						<a href="/component/community/profile" role="menuitem">
+							<span class="my-account-icon fa-solid fa-address-card" title="Profile"></span>
+							<span class="my-account-label">
+								View Profile </span>
+						</a>
+					</li>
+					<li data-step="16" data-intro="Edit your personal profile." data-position="left" role="none">
+						<a href="/component/community/profile/edit" role="menuitem">
+							<span class="my-account-icon fa-solid fa-address-card" title="Profile"></span>
+							<span class="my-account-label">Edit Profile</span>
+						</a>
+					</li>
+					<li data-step="16" data-intro="View your transcript" data-position="left" role="none">
+						<a href="/component/splms/?view=transcripts" role="menuitem">
+							<span class="my-account-icon fa-solid fa-scroll" title="Transcript"></span>
+							<span class="my-account-label">My Transcript</span>
+						</a>
+					</li>
+
+					<li data-step="18" role="none"
+						data-intro="Here you can Manage your credit cards and view charges as well as use your Rewards Points!"
+						data-position="left">
+						<a href="/billing" role="menuitem">
+							<span class="my-account-icon fa-solid fa-credit-card" title="Billing"></span>
+							<span class="my-account-label">Billing Manager</span>
+						</a>
+					</li>
+					<li data-step="19" data-intro="Check your inbox for new messages." data-position="left">
+						<a href="/component/community/inbox" role="menuitem">
+							<span class="my-account-icon fa-solid fa-envelope" title="Mail"></span>
+							<span class="my-account-label">My Inbox </span>
+						</a>
+					</li>
+
+					<li data-step="23" data-intro="Click here to logout." data-position="left" role="none">
+						<a href="/component/user/?task=logout" title="Log Out" role="menuitem">
+							<span class="my-account-icon fa-solid fa-right-from-bracket"></span>
+							<span class="my-account-label">Logout</span>
+						</a>
+					</li>
+
+					<li class="commit-version">
+						Version 2.44.2
+					</li>
+				</ul>
+				</button>
+			</div>
+
+			<style>
+				.language_text {
+					display: none;
+				}
+
+				.localization-selector {
+					display: flex;
+					align-items: center;
+					justify-content: space-around;
+					padding: 4px;
+					max-width: 120px;
+					font-size: 12px;
+				}
+
+				.localization-selector .dropdown-menu {
+					top: 20px;
+					left: 0px;
+				}
+
+				#user_language_selector {
+					font-size: 12px;
+				}
+
+				.localization-selector .fas {
+					font-size: 12px;
+				}
+			</style>
+			<div class="right-language" style="padding:15px;">
+				<div class="localization-selector">
+				</div>
+			</div>
+	</header>
+
+
+	<div id="wrapper">
+		<div id="sidebar-wrapper">
+			<div class="nano">
+				<div class="nano-content">
+
+
+					<nav id="primary-menu" class="sideIcons">
+						<div class="moduletable">
+							<ul role="menu" class="sidemenu ">
+								<li class="item-902 axsNav" role="menuitem"><a href="/landing-portal"
+										title="LandingPortal"><span class="lizicon lizicon-whatshot"></span><span
+											class="navLabel">Landing Portal</span></a></li>
+								<li class="item-903 axsNav" role="menuitem"><a href="/event-dash"
+										title="EventDashboard"><span class="lizicon lizicon-whatshot"></span><span
+											class="navLabel">Event Dashboard</span></a></li>
+								<li class="item-899 axsNav" role="menuitem"><a href="/designer-dashboard"
+										title="DesignerDashboard"><span class="lizicon lizicon-whatshot"></span><span
+											class="navLabel">Designer Dashboard</span></a></li>
+								<li class="item-898 axsNav" role="menuitem"><a href="/ux-courses"
+										title="GeneralCourses"><span class="lizicon lizicon-whatshot"></span><span
+											class="navLabel">Courses</span></a></li>
+								<li class="item-900 axsNav" role="menuitem"><a href="/events" title="SignalEvents"><span
+											class="lizicon lizicon-whatshot"></span><span
+											class="navLabel">Events</span></a></li>
+								<li class="item-905 axsNav" role="menuitem"> <a tabindex="0"
+										href="/dashboard?portal_preview=13">
+										<span class="lizicon lizicon-whatshot"></span><span class="navLabel">Event
+											Dashboard</span> </a>
+								</li>
+								<li class="item-906 axsNav" role="menuitem"> <a tabindex="0" href="/event-dash">
+										<span class="lizicon lizicon-whatshot"></span><span class="navLabel">Event
+											Dashboard</span> </a>
+								</li>
+							</ul>
+						</div>
+
+
+						<div id="clr" style="height:150px;"></div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div id="page-content-wrapper">
+
+
+			<main id="main-content" class="container-fluid">
+
+
+
+
+				<style>
+					.dashboard_title_bar {
+						padding: 0px;
+						font-size: 1px;
+						color: ;
+						background-color: ;
+					}
+
+					.dashboard_module {
+						margin: 0px;
+						padding: 0px;
+					}
+				</style>
+				<style>
+					@media(min-width:768px) {
+						#dash_module_0 {
+							height: auto;
+						}
+
+						#dash_module_0 .zone_module_container {
+							height: ;
+						}
+
+					}
+
+					@media(max-width:768px) {
+
+						#dash_module_0,
+						#dash_module_0 .zone_module_container {
+							max-height: 700px;
+						}
+					}
+				</style>
+				<div tabindex='0' class='col-md-12 '>
+					<div id='dash_module_0' class='dashboard_module' style='box-shadow: none !important;'>
+						<div id='dash_module_title_0' class='dashboard_title_bar'></div>
+						<div style='overflow: auto;' class='zone_module_container'>
+							<article class="moduletable span12">
+
+
+
+								<link rel="preconnect" href="https://fonts.gstatic.com">
+								<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+									rel="stylesheet">
+
+
+								<link href="/templates/axs/bootstrap-utilities/bootstrap-utilities.css"
+									rel="stylesheet">
+								<link rel="stylesheet" href="/components/com_axs/assets/css/media_v2.css">
+								<script src="https://kit.fontawesome.com/f06d0be547.js"
+									crossorigin="anonymous"></script>
+								<style>
+									:root {
+										--bs-font-sans-serif: 'Inter', "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+									}
+
+									.fs-7 {
+										font-size: 0.8rem !important;
+									}
+
+									.tov-content-container {
+										width: auto;
+										padding: 0 !important;
+										font-family: var(--bs-font-sans-serif);
+									}
+
+									.tov-ml-content {
+										width: 100%;
+									}
+
+									.ml-card {
+										max-width: 100% !important;
+									}
+
+									@media (min-width: 768px) {
+										.ml-card {
+											max-width: 48.6% !important;
+										}
+									}
+
+									@media (min-width: 992px) {
+										.ml-card {
+											max-width: 49% !important;
+										}
+									}
+
+									@media (min-width: 1200px) {
+										.ml-card {
+											max-width: 23.98% !important;
+										}
+									}
+
+									@media (min-width: 1400px) {
+										.ml-card {
+											max-width: 24.28% !important;
+										}
+									}
+
+									.ml-card-image {
+										background-image: url(../img/placeholders/diversity-training-header.jpg);
+										background-size: cover;
+										background-position: center center;
+										min-height: 200px;
+									}
+
+									.tov-page-header {
+
+										background-size: cover;
+										background-position: center center;
+										min-height: 250px;
+										position: relative;
+									}
+
+									@media (max-width: 991.98px) {
+										.tov-page-header {
+											min-height: auto;
+										}
+									}
+
+									.tov-page-header-mask {
+										background-color: rgba(0, 0, 0, 0.6);
+										position: absolute;
+										top: 0;
+										right: 0;
+										bottom: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										overflow: hidden;
+										background-attachment: fixed;
+									}
+
+									#searchEvents input,
+									#searchEvents select {
+										height: 38px !important;
+									}
+
+									.badge {
+										font-size: inherit !important;
+										font-weight: inherit !important;
+										border-radius: 2px !important;
+										padding: 8px !important;
+									}
+
+									.event-title {
+										font-size: 20px;
+										margin-bottom: 15px;
+										margin-top: 15px;
+									}
+
+									.ml-card-image .p-2 {
+										padding-top: 0px !important;
+										padding-bottom: 0px !important;
+										padding: 4px !important;
+										padding-left: 8px !important;
+									}
+
+									.btn .badge {
+										top: 0px !important;
+									}
+
+									.ml-card .btn {
+										background: #f5f5f5;
+									}
+
+									.event-date {
+										background-color: var(--primary-color) !important;
+									}
+								</style>
+
+								<div class="tov-content-container container-fluid">
+
+
+									<div name="Events Items"
+										class="tov-ml-content d-inline-flex justify-content-center flex-wrap py-1 py-md-2 px-1">
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/signal_1_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Signal Office Hours</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/120-signal-office-hours?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/Frame_3.png);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Scale Tovuti with Signal</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/121-scale-tovuti-with-signal?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_16_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Signal Design Blocks inside Tovuti</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/122-signal-design-blocks-inside-tovuti?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_10_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Power up Tovuti LMS with Signal Javascript
+													Blocks</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/123-power-up-tovuti-lms-with-signal-javascript-blocks?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_13_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Merging Strategy: When to phase in visual
+													elements in content strategy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/attention-to-detail/125-planning-your-visuals-in-the-content-strategy-phase-release-your-next-course-in-half-the-time?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_2_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Demonstrate your UX writing skills by writing
+													succinct, useful, and actionable notification copy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/ux-writing/126-demonstrate-your-ux-writing-skills-by-writing-succinct-useful-and-actionable-notification-copy?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_13_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Carry out a competitive analysis to help your
+													product stay on top of UX and usability developments in your
+													industry</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/color-psychology/127-carry-out-a-competitive-analysis-to-help-your-product-stay-on-top-of-ux-and-usability-developments-in-your-industry?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_1_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Showcase your research and analytical skills by
+													carrying out research and building a user persona</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/color-psychology/128-showcase-your-research-and-analytical-skills-by-carrying-out-research-and-building-a-user-persona?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_5_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Conduct a content audit to optimize your
+													website and improve conversions</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/attention-to-detail/129-conduct-a-content-audit-to-optimize-your-website-and-improve-conversions?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_15_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Become a certified UX Writer and acquire the
+													skills required to craft clear and concise copy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/advanced-design-patterns/117-signal-grandparent?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_4_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Gain the career-building skills you need to
+													become a successful UX Researcher</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/signal-grandparent/signal-parent/118-signal-parent?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_14_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Learn how to build user-centered products and
+													get your UX Designer certification</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/design-patterns/119-signal-child?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+									</div>
+								</div>
+								<script>
+									function resizeCards() {
+										var parentWidth = parseInt($('.tov-ml-content').width());
+										var cardWidth;
+										if (parentWidth <= 600) {
+											cardWidth = '90%';
+										} else if (parentWidth <= 992) {
+											cardWidth = '45%';
+										} else {
+											cardWidth = '23.98%';
+										}
+										$('.ml-card').attr('style', 'max-width:' + cardWidth + ' !important;');
+									}
+									resizeCards();
+									$(window).resize(function () { resizeCards() })
+								</script>
+
+
+
+
+
+
+
+							</article>
+
+						</div>
+					</div>
+				</div>
+				<style>
+					@media(min-width:768px) {
+						#dash_module_1 {
+							height: auto;
+						}
+
+						#dash_module_1 .zone_module_container {
+							height: ;
+						}
+
+					}
+
+					@media(max-width:768px) {
+
+						#dash_module_1,
+						#dash_module_1 .zone_module_container {
+							max-height: 700px;
+						}
+					}
+				</style>
+				<div tabindex='0' class='col-md-12 '>
+					<div id='dash_module_1' class='dashboard_module' style='box-shadow: none !important;'>
+						<div id='dash_module_title_1' class='dashboard_title_bar'></div>
+						<div style='overflow: auto;' class='zone_module_container'>
+							<div class="well ">
+								<link rel="preconnect" href="https://fonts.gstatic.com">
+								<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+									rel="stylesheet">
+
+
+								<link href="/templates/axs/bootstrap-utilities/bootstrap-utilities.css"
+									rel="stylesheet">
+
+								<link rel="stylesheet" href="/components/com_axs/assets/css/media_v2.css">
+								<script src="https://kit.fontawesome.com/f06d0be547.js"
+									crossorigin="anonymous"></script>
+								<style>
+									:root {
+										--bs-font-sans-serif: 'Inter', "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+									}
+
+									.fs-7 {
+										font-size: 0.8rem !important;
+									}
+
+									.tov-content-container {
+										width: auto;
+										padding: 0 !important;
+										font-family: var(--bs-font-sans-serif);
+									}
+
+									.tov-ml-content {
+										width: 100%;
+									}
+
+									.ml-card {
+										max-width: 100% !important;
+									}
+
+									@media (min-width: 768px) {
+										.ml-card {
+											max-width: 48.6% !important;
+										}
+									}
+
+									@media (min-width: 992px) {
+										.ml-card {
+											max-width: 49% !important;
+										}
+									}
+
+									@media (min-width: 1200px) {
+										.ml-card {
+											max-width: 23.98% !important;
+										}
+									}
+
+									@media (min-width: 1400px) {
+										.ml-card {
+											max-width: 24.28% !important;
+										}
+									}
+
+									.ml-card-image {
+										background-image: url(../img/placeholders/diversity-training-header.jpg);
+										background-size: cover;
+										background-position: center center;
+										min-height: 200px;
+									}
+
+									.tov-page-header {
+
+										background-size: cover;
+										background-position: center center;
+										min-height: 250px;
+										position: relative;
+									}
+
+									@media (max-width: 991.98px) {
+										.tov-page-header {
+											min-height: auto;
+										}
+									}
+
+									.tov-page-header-mask {
+										background-color: rgba(0, 0, 0, 0.6);
+										position: absolute;
+										top: 0;
+										right: 0;
+										bottom: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										overflow: hidden;
+										background-attachment: fixed;
+									}
+
+									#searchEvents input,
+									#searchEvents select {
+										height: 38px !important;
+									}
+
+									.badge {
+										font-size: inherit !important;
+										font-weight: inherit !important;
+										border-radius: 2px !important;
+										padding: 8px !important;
+									}
+
+									.event-title {
+										font-size: 20px;
+										margin-bottom: 15px;
+										margin-top: 15px;
+									}
+
+									.ml-card-image .p-2 {
+										padding-top: 0px !important;
+										padding-bottom: 0px !important;
+										padding: 4px !important;
+										padding-left: 8px !important;
+									}
+
+									.btn .badge {
+										top: 0px !important;
+									}
+
+									.ml-card .btn {
+										background: #f5f5f5;
+									}
+
+									.event-date {
+										background-color: var(--primary-color) !important;
+									}
+								</style>
+
+								<div class="tov-content-container container-fluid">
+
+
+									<div name="Events Items"
+										class="bg-mint-9 tov-ml-content d-inline-flex justify-content-center flex-wrap py-1 py-md-2 px-1">
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/signal_1_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Signal Office Hours adsf</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/120-signal-office-hours?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/Frame_3.png);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Scale Tovuti with Signal</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/121-scale-tovuti-with-signal?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_16_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Signal Design Blocks inside Tovuti</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/122-signal-design-blocks-inside-tovuti?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_10_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Power up Tovuti LMS with Signal Javascript
+													Blocks</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/123-power-up-tovuti-lms-with-signal-javascript-blocks?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_13_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Merging Strategy: When to phase in visual
+													elements in content strategy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/attention-to-detail/125-planning-your-visuals-in-the-content-strategy-phase-release-your-next-course-in-half-the-time?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_2_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Demonstrate your UX writing skills by writing
+													succinct, useful, and actionable notification copy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/ux-writing/126-demonstrate-your-ux-writing-skills-by-writing-succinct-useful-and-actionable-notification-copy?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_13_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Carry out a competitive analysis to help your
+													product stay on top of UX and usability developments in your
+													industry</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/color-psychology/127-carry-out-a-competitive-analysis-to-help-your-product-stay-on-top-of-ux-and-usability-developments-in-your-industry?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_1_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Showcase your research and analytical skills by
+													carrying out research and building a user persona</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/color-psychology/128-showcase-your-research-and-analytical-skills-by-carrying-out-research-and-building-a-user-persona?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_5_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Conduct a content audit to optimize your
+													website and improve conversions</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/attention-to-detail/129-conduct-a-content-audit-to-optimize-your-website-and-improve-conversions?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_15_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Become a certified UX Writer and acquire the
+													skills required to craft clear and concise copy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/advanced-design-patterns/117-signal-grandparent?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_4_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Gain the career-building skills you need to
+													become a successful UX Researcher</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/signal-grandparent/signal-parent/118-signal-parent?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_14_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Learn how to build user-centered products and
+													get your UX Designer certification</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/design-patterns/119-signal-child?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+									</div>
+								</div>
+								<script>
+									function resizeCards() {
+										var parentWidth = parseInt($('.tov-ml-content').width());
+										var cardWidth;
+										if (parentWidth <= 600) {
+											cardWidth = '90%';
+										} else if (parentWidth <= 992) {
+											cardWidth = '45%';
+										} else {
+											cardWidth = '23.98%';
+										}
+										$('.ml-card').attr('style', 'max-width:' + cardWidth + ' !important;');
+									}
+									resizeCards();
+									$(window).resize(function () { resizeCards() })
+								</script>
+
+
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<style>
+					@media(min-width:768px) {
+						#dash_module_2 {
+							height: auto;
+						}
+
+						#dash_module_2 .zone_module_container {
+							height: ;
+						}
+
+					}
+
+					@media(max-width:768px) {
+
+						#dash_module_2,
+						#dash_module_2 .zone_module_container {
+							max-height: 700px;
+						}
+					}
+				</style>
+				<div tabindex='0' class='col-md-12 '>
+					<div id='dash_module_2' class='dashboard_module' style='box-shadow: none !important;'>
+						<div id='dash_module_title_2' class='dashboard_title_bar'></div>
+						<div style='overflow: auto;' class='zone_module_container'>
+							<div class="well ">
+								<link rel="preconnect" href="https://fonts.gstatic.com">
+								<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+									rel="stylesheet">
+
+
+								<link href="/templates/axs/bootstrap-utilities/bootstrap-utilities.css"
+									rel="stylesheet">
+								<link rel="stylesheet" href="/components/com_axs/assets/css/media_v2.css">
+								<script src="https://kit.fontawesome.com/f06d0be547.js"
+									crossorigin="anonymous"></script>
+								<style>
+									:root {
+										--bs-font-sans-serif: 'Inter', "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+									}
+
+									.fs-7 {
+										font-size: 0.8rem !important;
+									}
+
+									.tov-content-container {
+										width: auto;
+										padding: 0 !important;
+										font-family: var(--bs-font-sans-serif);
+									}
+
+									.tov-ml-content {
+										width: 100%;
+									}
+
+									.ml-card {
+										max-width: 100% !important;
+									}
+
+									@media (min-width: 768px) {
+										.ml-card {
+											max-width: 48.6% !important;
+										}
+									}
+
+									@media (min-width: 992px) {
+										.ml-card {
+											max-width: 49% !important;
+										}
+									}
+
+									@media (min-width: 1200px) {
+										.ml-card {
+											max-width: 23.98% !important;
+										}
+									}
+
+									@media (min-width: 1400px) {
+										.ml-card {
+											max-width: 24.28% !important;
+										}
+									}
+
+									.ml-card-image {
+										background-image: url(../img/placeholders/diversity-training-header.jpg);
+										background-size: cover;
+										background-position: center center;
+										min-height: 200px;
+									}
+
+									.tov-page-header {
+
+										background-size: cover;
+										background-position: center center;
+										min-height: 250px;
+										position: relative;
+									}
+
+									@media (max-width: 991.98px) {
+										.tov-page-header {
+											min-height: auto;
+										}
+									}
+
+									.tov-page-header-mask {
+										background-color: rgba(0, 0, 0, 0.6);
+										position: absolute;
+										top: 0;
+										right: 0;
+										bottom: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										overflow: hidden;
+										background-attachment: fixed;
+									}
+
+									#searchEvents input,
+									#searchEvents select {
+										height: 38px !important;
+									}
+
+									.badge {
+										font-size: inherit !important;
+										font-weight: inherit !important;
+										border-radius: 2px !important;
+										padding: 8px !important;
+									}
+
+									.event-title {
+										font-size: 20px;
+										margin-bottom: 15px;
+										margin-top: 15px;
+									}
+
+									.ml-card-image .p-2 {
+										padding-top: 0px !important;
+										padding-bottom: 0px !important;
+										padding: 4px !important;
+										padding-left: 8px !important;
+									}
+
+									.btn .badge {
+										top: 0px !important;
+									}
+
+									.ml-card .btn {
+										background: #f5f5f5;
+									}
+
+									.event-date {
+										background-color: var(--primary-color) !important;
+									}
+								</style>
+
+								<div class="tov-content-container container-fluid bg-mintlight-9">
+
+
+									<div name="Events Items"
+										class="hidden tov-ml-content d-inline-flex justify-content-center flex-wrap py-1 py-md-2 px-1">
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/signal_1_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Signal Office Hours</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/120-signal-office-hours?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/Frame_3.png);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Scale Tovuti with Signal</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/121-scale-tovuti-with-signal?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_16_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Signal Design Blocks inside Tovuti</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/122-signal-design-blocks-inside-tovuti?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_10_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Power up Tovuti LMS with Signal Javascript
+													Blocks</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/123-power-up-tovuti-lms-with-signal-javascript-blocks?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_13_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Merging Strategy: When to phase in visual
+													elements in content strategy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/attention-to-detail/125-planning-your-visuals-in-the-content-strategy-phase-release-your-next-course-in-half-the-time?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_2_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Demonstrate your UX writing skills by writing
+													succinct, useful, and actionable notification copy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/ux-writing/126-demonstrate-your-ux-writing-skills-by-writing-succinct-useful-and-actionable-notification-copy?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_13_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Carry out a competitive analysis to help your
+													product stay on top of UX and usability developments in your
+													industry</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/color-psychology/127-carry-out-a-competitive-analysis-to-help-your-product-stay-on-top-of-ux-and-usability-developments-in-your-industry?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_1_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Showcase your research and analytical skills by
+													carrying out research and building a user persona</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/color-psychology/128-showcase-your-research-and-analytical-skills-by-carrying-out-research-and-building-a-user-persona?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_5_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Conduct a content audit to optimize your
+													website and improve conversions</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/attention-to-detail/129-conduct-a-content-audit-to-optimize-your-website-and-improve-conversions?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_15_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Become a certified UX Writer and acquire the
+													skills required to craft clear and concise copy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/advanced-design-patterns/117-signal-grandparent?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_4_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Gain the career-building skills you need to
+													become a successful UX Researcher</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/signal-grandparent/signal-parent/118-signal-parent?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_14_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Learn how to build user-centered products and
+													get your UX Designer certification</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/design-patterns/119-signal-child?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+									</div>
+								</div>
+								<script>
+									function resizeCards() {
+										var parentWidth = parseInt($('.tov-ml-content').width());
+										var cardWidth;
+										if (parentWidth <= 600) {
+											cardWidth = '90%';
+										} else if (parentWidth <= 992) {
+											cardWidth = '45%';
+										} else {
+											cardWidth = '23.98%';
+										}
+										$('.ml-card').attr('style', 'max-width:' + cardWidth + ' !important;');
+									}
+									resizeCards();
+									$(window).resize(function () { resizeCards() })
+								</script>
+
+
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<style>
+					@media(min-width:768px) {
+						#dash_module_3 {
+							height: auto;
+						}
+
+						#dash_module_3 .zone_module_container {
+							height: ;
+						}
+
+					}
+
+					@media(max-width:768px) {
+
+						#dash_module_3,
+						#dash_module_3 .zone_module_container {
+							max-height: 700px;
+						}
+					}
+				</style>
+				<div tabindex='0' class='col-md-12 '>
+					<div id='dash_module_3' class='dashboard_module' style='box-shadow: none !important;'>
+						<div id='dash_module_title_3' class='dashboard_title_bar'></div>
+						<div style='overflow: auto;' class='zone_module_container'>
+							<div class="well ">
+								<link rel="preconnect" href="https://fonts.gstatic.com">
+								<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+									rel="stylesheet">
+
+
+								<link href="/templates/axs/bootstrap-utilities/bootstrap-utilities.css"
+									rel="stylesheet">
+								<link rel="stylesheet" href="/components/com_axs/assets/css/media_v2.css">
+								<script src="https://kit.fontawesome.com/f06d0be547.js"
+									crossorigin="anonymous"></script>
+								<style>
+									:root {
+										--bs-font-sans-serif: 'Inter', "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+									}
+
+									.fs-7 {
+										font-size: 0.8rem !important;
+									}
+
+									.tov-content-container {
+										width: auto;
+										padding: 0 !important;
+										font-family: var(--bs-font-sans-serif);
+									}
+
+									.tov-ml-content {
+										width: 100%;
+									}
+
+									.ml-card {
+										max-width: 100% !important;
+									}
+
+									@media (min-width: 768px) {
+										.ml-card {
+											max-width: 48.6% !important;
+										}
+									}
+
+									@media (min-width: 992px) {
+										.ml-card {
+											max-width: 49% !important;
+										}
+									}
+
+									@media (min-width: 1200px) {
+										.ml-card {
+											max-width: 23.98% !important;
+										}
+									}
+
+									@media (min-width: 1400px) {
+										.ml-card {
+											max-width: 24.28% !important;
+										}
+									}
+
+									.ml-card-image {
+										background-image: url(../img/placeholders/diversity-training-header.jpg);
+										background-size: cover;
+										background-position: center center;
+										min-height: 200px;
+									}
+
+									.tov-page-header {
+
+										background-size: cover;
+										background-position: center center;
+										min-height: 250px;
+										position: relative;
+									}
+
+									@media (max-width: 991.98px) {
+										.tov-page-header {
+											min-height: auto;
+										}
+									}
+
+									.tov-page-header-mask {
+										background-color: rgba(0, 0, 0, 0.6);
+										position: absolute;
+										top: 0;
+										right: 0;
+										bottom: 0;
+										left: 0;
+										width: 100%;
+										height: 100%;
+										overflow: hidden;
+										background-attachment: fixed;
+									}
+
+									#searchEvents input,
+									#searchEvents select {
+										height: 38px !important;
+									}
+
+									.badge {
+										font-size: inherit !important;
+										font-weight: inherit !important;
+										border-radius: 2px !important;
+										padding: 8px !important;
+									}
+
+									.event-title {
+										font-size: 20px;
+										margin-bottom: 15px;
+										margin-top: 15px;
+									}
+
+									.ml-card-image .p-2 {
+										padding-top: 0px !important;
+										padding-bottom: 0px !important;
+										padding: 4px !important;
+										padding-left: 8px !important;
+									}
+
+									.btn .badge {
+										top: 0px !important;
+									}
+
+									.ml-card .btn {
+										background: #f5f5f5;
+									}
+
+									.event-date {
+										background-color: var(--primary-color) !important;
+									}
+								</style>
+
+								<div class="tov-content-container container-fluid">
+
+
+									<div name="Events Items"
+										class="tov-ml-content d-inline-flex justify-content-center flex-wrap py-1 py-md-2 px-1">
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/signal_1_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Signal Office Hours</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/120-signal-office-hours?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/Frame_3.png);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Scale Tovuti with Signal</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/121-scale-tovuti-with-signal?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_16_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Signal Design Blocks inside Tovuti</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/122-signal-design-blocks-inside-tovuti?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_10_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Power up Tovuti LMS with Signal Javascript
+													Blocks</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/123-power-up-tovuti-lms-with-signal-javascript-blocks?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_13_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Merging Strategy: When to phase in visual
+													elements in content strategy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/attention-to-detail/125-planning-your-visuals-in-the-content-strategy-phase-release-your-next-course-in-half-the-time?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_2_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Demonstrate your UX writing skills by writing
+													succinct, useful, and actionable notification copy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/ux-writing/126-demonstrate-your-ux-writing-skills-by-writing-succinct-useful-and-actionable-notification-copy?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_13_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Carry out a competitive analysis to help your
+													product stay on top of UX and usability developments in your
+													industry</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/color-psychology/127-carry-out-a-competitive-analysis-to-help-your-product-stay-on-top-of-ux-and-usability-developments-in-your-industry?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_1_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Showcase your research and analytical skills by
+													carrying out research and building a user persona</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/expanded-ux/color-psychology/128-showcase-your-research-and-analytical-skills-by-carrying-out-research-and-building-a-user-persona?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_5_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">1 Mar 2024 - 7 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Conduct a content audit to optimize your
+													website and improve conversions</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/attention-to-detail/129-conduct-a-content-audit-to-optimize-your-website-and-improve-conversions?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_15_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Become a certified UX Writer and acquire the
+													skills required to craft clear and concise copy</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/patterns-detail/advanced-design-patterns/117-signal-grandparent?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_4_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Gain the career-building skills you need to
+													become a successful UX Researcher</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/signal-grandparent/signal-parent/118-signal-parent?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+										<!-- Event Card: CARD -->
+										<div name="Event Card"
+											class="d-flex align-items-start flex-column ml-card text-decoration-none rounded shadow overflow-hidden w-100 w-md-50 mx-md-1 mb-1 mb-md-2">
+											<div class="ml-card-image position-relative rounded-top w-100"
+												style="background-image: url(/images/UWwoQnx3pz0egmHSUaf9bDrEMjg1MjQzOTI2NzA2/events/images/generic_14_small.jpg);">
+												<!-- <div name="Event Featured" class="position-absolute text-body top-0 end-0 px-2 py-1 rounded bg-white mt-2 me-2">
+					<i class="fas fa-stars text-primary me-2"></i>Featured
+				</div> -->
+											</div>
+											<div
+												class="bottom-blog d-inline-flex justify-content-between align-items-center w-100 bg-dark event-date p-2">
+												<div
+													class="bottom-blog-user d-inline-flex justify-content-between align-items-center text-light">
+													<i class="fas fa-calendar text-light me-2"></i><span
+														class="blog-author-name fs-7">6 Mar 2024</span>
+												</div>
+											</div>
+											<div name="Card Text" class="text-body p-3">
+												<div class="event-title">Learn how to build user-centered products and
+													get your UX Designer certification</div>
+											</div>
+											<!-- <div name="Card Details" class="tov-event-location px-3">
+				<p class="text-start fs-7"><i class="fas fa-map-marked-alt me-2"></i>Virtual Meeting</p>
+			</div> -->
+											<div name="Card Buttons" class="p-3 pt-0 d-flex mt-auto"
+												style="width: 100%;">
+												<!-- <div class="btn btn-success flex-fill me-2"><i class="fas fa-paper-plane me-2"></i>Register</div> -->
+												<a href="/component/eventbooking/product-designer/getting-started/design-patterns/119-signal-child?Itemid=762"
+													class="btn btn-outline-primary btn-sm pt-0 d-flex mt-auto w-100"
+													style="background-color: white !important; color:black !important">View
+													Details</a>
+
+											</div>
+										</div>
+										<!-- END Event Card: CARD -->
+									</div>
+								</div>
+								<script>
+									function resizeCards() {
+										var parentWidth = parseInt($('.tov-ml-content').width());
+										var cardWidth;
+										if (parentWidth <= 600) {
+											cardWidth = '90%';
+										} else if (parentWidth <= 992) {
+											cardWidth = '45%';
+										} else {
+											cardWidth = '23.98%';
+										}
+										$('.ml-card').attr('style', 'max-width:' + cardWidth + ' !important;');
+									}
+									resizeCards();
+									$(window).resize(function () { resizeCards() })
+								</script>
+
+
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<script>
+					//Add a height to the dashboard modules so that the scrollbars work properly.
+					$(".zone_module_container").each(
+						function () {
+							var parentContainer = this.parentNode;
+							var titleBar = parentContainer.getElementsByClassName('zone_module_title_bar');
+							var parentHeight = $(parentContainer).css("height");
+							var titleHeight = $(titleBar).css("height");
+
+							var divHeight = parseInt(parentHeight) - parseInt(titleHeight);
+							if (divHeight < 0) {
+								divHeight = 0;
+							}
+
+							divHeight = "" + divHeight + "px";
+
+							$(this).css({
+								"height": divHeight
+							});
+						}
+					);
+				</script>
+
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-12 tovuti-content" style="margin-top:40px;">
+
+
+						</div>
+					</div>
+				</div>
+
+				<div class='clearfix'></div>
+
+			</main>
+
+			<footer id="footer" aria-label="Footer">
+				Signal &copy;
+				2023 All Rights Reserved. <br />
+				<br />
+			</footer>
+			<script>
+				$(".nano").nanoScroller();
+			</script>
+		</div>
+	</div>
+
+
+	<div class="moduletable">
+
+		<style>
+			.modal-dialog {
+				color: #333;
+			}
+		</style>
+
+		<script>
+			$('.ginAudioPopup').attr('href', 'javascript:void(0)');
+			$('.popModule').attr('href', 'javascript:void(0)');
+
+			$(document).on("click", ".ginAudioPopup",
+				function () {
+					var src = $(this).attr('alias');
+					if ((src.substr(0, 1) != '/') && (src.substr(0, 4) != 'http')) {
+						src = "/" + src;
+					}
+
+					var extension = src.substr((src.lastIndexOf('.') + 1));
+					var title = $(this).attr('title');
+					extension = extension.toLowerCase();
+					switch (extension) {
+						case 'mp3':
+							var media = '<audio controls  autoplay style="width:100%;"><source src="' + src + '" type="audio/mpeg"></audio>';
+							break;
+
+						case 'mp4':
+							var media = '<video controls  style="width:100%;" poster="/"><source src="' + src + '" type="video/mp4"></video>';
+							break;
+
+						default:
+							var media = '<div class="embed-responsive embed-responsive-16by9"><iframe width="100%"  class="embed-responsive-item" src="https://www.youtube.com/embed/' + src + '" frameborder="0" allowfullscreen></iframe></div>';
+							break;
+					}
+
+					var downloadLink = encodeURI(src);
+					$('#mediaModalLabel').html(title);
+					$('.modal-body').html(media);
+					$('.downloadBTN').attr('href', '/download.php?file=' + downloadLink);
+					$("#mediaModal").modal();
+
+				}
+			);
+
+			$(document).on("click", ".quizButton",
+				function () {
+					var src = $(this).attr('alias');
+					var title = $(this).text();
+					var height = $(this).attr('data-mediabox-height');
+					if (!height) {
+						height = 700;
+					}
+					var iframe = '<iframe src="' + src + '" frameborder="0" scrolling="auto" width="100%" height="' + height + '"><iframe>';
+					$('#mediaModal').addClass('quizModal');
+					$('#mediaModalLabel').html(title);
+					$('.modal-body').html(iframe);
+					$("#mediaModal").modal();
+					$('.downloadBTN').hide();
+
+				}
+			);
+
+			$(document).on("click", ".tovuti_popup",
+				function (el) {
+					el.preventDefault();
+					if (!$(this).attr('id')) {
+						var title = $(this).attr('title');
+						var src = $(this).attr('href');
+						if (!src) {
+							var src = $(this).attr('link');
+						}
+						var iframe = '<iframe src="' + src + '" frameborder="0" scrolling="auto" style="height: 725px; width: 100%;"><iframe>';
+						$('#mediaModalLabel').html(title);
+						$('.modal-body').html(iframe);
+						$("#mediaModal").modal();
+						$('.downloadBTN').hide();
+					}
+				}
+			);
+
+			$(document).on("click", ".popModule",
+				function () {
+					var src = $(this).attr('title');
+					$.ajax({
+						url: '/component/axs?task=popupmodule.loadModule&format=raw&lang=en',
+						data: {
+							moduleID: src
+						},
+						type: 'post'
+					}).done(function (result) {
+						$('#mediaModalLabel').html('');
+						$('#loginModal > .modal-dialog').html('');
+						$('#loginModal > .modal-dialog').html(result);
+						$("#loginModal").modal();
+					});
+				}
+			);
+
+			$(document).on("click", ".popLogin",
+				function () {
+					$('#mediaModalLabel').html('');
+					$('.modal-dialog').html('');
+					$("#mediaModal").modal();
+				}
+			);
+
+			$(document).on('hidden.bs.modal', '.quizModal',
+				function () {
+					$('#mediaModal').removeClass('quizModal');
+					$('.modal-body').html('');
+					parent.location.reload();
+				}
+			);
+
+			$(document).on('hidden.bs.modal', '#mediaModal',
+				function () {
+					$('.axsAudio').stop();
+					$('.modal-body').html('');
+				}
+			);
+		</script>
+		<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+			</div>
+		</div>
+
+		<div class="modal fade" id="mediaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close closeModal" data-dismiss="modal"
+							aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="mediaModalLabel">Modal title</h4>
+					</div>
+					<div class="modal-body">Loading...</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default closeModal" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<link href="http://localhost:3000/TovutiGoogleWorkspace/signal.tovuti.io/abudhabi.css" rel="stylesheet"
+		type="text/css">
+
+	<link
+		href="file:///Users/prodkt/Documents/Official%20Prodkt%20Development/Prodkt-Contract-Work/AbuDhabi/public/TovutiGoogleWorkspace/signal.tovuti.io/abudhabi.css"
+		rel="stylesheet">
+
+</body>
+
+</html>
+<script>
+	$.ajax({
+		type: 'POST',
+		url: '/index.php?option=com_axs&task=update.session&format=raw'
+	});
+</script>

@@ -1,0 +1,529 @@
+/* CSS Document */
+
+
+/* START DASHBOARD HEADER */
+
+#header-wrap {
+  background-color: var(--base-color);
+  height: auto !important;
+  padding: 0;
+  box-shadow: var(--box-shadow-2);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  -webkit-box-orient: horizontal;
+  overflow: visible !important;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: visible !important;
+}
+
+#header-wrap a:hover {
+  text-decoration: none;
+}
+
+/* Change depending on the logo height */
+#menu-toggle {
+  background-color: var(--accent-color) !important;
+  font-size: var(--font-size-4) !important;
+  color: var(--base-color) !important;
+  height: 100px;
+  width: 100px;
+  margin-right: 0;
+  top: 0 !important;
+  left: 0;
+  text-align: center;
+  padding: 30px;
+  float: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  /* -webkit-box-orient: horizontal; */
+  /* -webkit-box-direction: normal; */
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#menu-toggle::before {
+  font-size: var(--font-size-6) !important;
+}
+
+
+.sideToggle {
+position: relative;
+z-index: 10000;
+}
+
+.sideToggle:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+
+
+.logo-box-wrap {
+  height: 100px;
+  max-height: 100px;
+}
+
+.logo_box {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+img#dash_logo {
+  height: 75px;
+  /* moved over from dashboard.css and adjusted */
+  min-height: 75px;
+  max-height: 85px !important;
+  max-width: 400px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+  .right-language {
+    right: 69px !important;
+  }
+}
+
+.rtl img#dash_logo {
+  min-height: unset;
+}
+
+#dash_logo {
+  padding-top: var(--padding-2);
+  padding-bottom: var(--padding-2);
+}
+
+.moduletable.notifications {
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.notifications .notification-alert {
+  background-color: var(--primary-color) !important;
+  font-size: 9px !important;
+  color: var(--base-color) !important;
+  right: -5px !important;
+  border-bottom-left-radius: 0 !important;
+  line-height: 13px !important;
+}
+
+
+.notifications .notification-alert:hover {
+  background-color: var(--accent-color) !important;
+  color: var(--base-color) !important;
+}
+
+.notifications:hover .notification-alert {
+  background-color: var(--accent-color) !important;
+  color: var(--base-color) !important;
+}
+
+.notifications {
+  border-left: var(--border-1);
+  padding-left: 15px !important;
+}
+
+.joms-notifications,
+#social_links_menu {
+  margin-bottom: 0 !important;
+  margin: 0 !important;
+  padding: 0 0 0 0 !important;
+}
+
+
+/* Hamburger/Bell/Mail/Person/Social icon - Change depending on brand - this is not customizable via Tovuti Backend */
+.joms-notifications a,
+.joms-notifications a span,
+.sideToggle,
+#share_social_links {
+  color: var(--accent-color) !important;
+  font-size: var(--font-size-3) !important;
+  transition: all .2s ease-in-out;
+  border: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Hamburger/Bell/Mail/Person/Social icon Hover - Change depending on brand - this is not customizable via Tovuti Backend */
+.joms-notifications a:hover span,
+.sideToggle:hover,
+#share_social_links:hover,
+.top-dropdown:hover,
+a.sideToggle:hover {
+  color: var(--primary-color) !important;
+  transition: all .2s ease-in-out;
+}
+
+.set-right {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: visible;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#card_info
+
+/* Font Size for Username, User ID */
+  {
+  margin-top: 0 !important;
+  font-size: var(--font-size-1) !important;
+}
+
+#my-account .comment-img
+
+/* Margin for User Icon */
+  {
+  margin-right: 10px;
+  padding: 3px !important;
+  border: var(--border-1) !important;
+  border-radius: var(--border-radius-full) !important;
+}
+
+#my-account .comment-img img {
+  border-radius: var(--border-radius-full) !important;
+}
+
+#social_links {
+  margin-top: 45px;
+}
+
+.top-dropdown {
+  color: var(--accent-color) !important;
+}
+
+#my-account-menu,
+#social_links,
+#more-settings {
+  background-color: var(--base-color) !important;
+  border: var(--border-1) !important;
+  padding: var(--padding-2) !important;
+  border-radius: var(--border-radius-10) !important;
+  box-shadow: var(--box-shadow-2) !important;
+  font-family: var(--body-font) !important;
+  font-size: var(--font-size-1) !important;
+}
+
+#my-account-menu.dropdown-menu>li>a,
+#social_links a .social_link_item,
+#more-settings li a {
+  color: var(--primary-color) !important;
+  border-radius: var(--border-radius-5) !important;
+  border: 1px solid rgba(255, 255, 255, 0) !important;
+  padding: var(--padding-2) !important;
+  line-height: 100% !important;
+}
+
+#my-account-menu.dropdown-menu>li>a:active,
+#social_links a .social_link_item:active {
+  border: var(--border-1) !important;
+}
+
+#my-account-menu.dropdown-menu>li>a:hover,
+#social_links a .social_link_item:hover,
+.inspiration_info,
+#postSort div {
+  color: var(--primary-color) !important;
+  background-color: rgba(0, 0, 0, .02) !important;
+  border: var(--border-1) !important;
+  background-image: none;
+  transition: all .2s ease-in-out;
+  box-shadow: none !important;
+  padding: var(--padding-2) !important;
+}
+
+#my-account-menu li:hover span:before,
+#social_links a .social_link_item:hover .social_link_icon:before {
+  color: var(--accent-color) !important;
+  transition: all .2s ease-in-out;
+}
+
+.social_link_item:hover {
+  border-radius: var(--border-radius-10) !important;
+}
+
+.mfp-bg {
+  background: var(--primary-color) !important;
+  background-color: var(--primary-color) !important;
+}
+
+.joms-popup {
+  box-shadow: var(--box-shadow-2) !important;
+}
+
+.joms-popup--whiteblock {
+  border-radius: var(--border-radius-10);
+}
+
+.joms-popup__title {
+  background-color: var(--base-color);
+  color: var(--accent-color);
+  font-weight: normal;
+  font-family: var(--heading-font) !important;
+  border: 0 !important;
+  border-bottom: var(--border-1) !important;
+  border-radius: var(--border-radius-10) var(--border-radius-10) 0 0 !important;
+  margin-top: -2px;
+}
+
+.joms-popup__content--single li {
+  font-size: var(--font-size-1) !important;
+  color: var(--font-color) !important;
+}
+
+.joms-button--neutral {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color) !important;
+  color: var(--color-white) !important;
+  border-radius: var(--border-radius-5);
+  margin-bottom: 5px;
+}
+
+.joms-button--neutral:hover {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color) !important;
+  color: #fff !important;
+  border-radius: var(--border-radius-5);
+  margin-bottom: 5px;
+}
+
+button.mfp-close {
+  color: var(--accent-color) !important;
+  opacity: 1;
+}
+
+div.mfp-bg {
+  z-index: 2000 !important;
+}
+
+div.mfp-wrap {
+  z-index: 2100 !important;
+}
+
+/* END DASHBOARD HEADER */
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+
+/* 
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+
+/* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+@media (max-width: 800px) {
+
+  #card_info {
+    display: none !important;
+  }
+
+
+  .notifications {
+    border-left: 0px;
+    padding-left: 0;
+  }
+
+  #social_links_menu {
+    display: none !important;
+  }
+
+
+
+}
+
+@media (max-width: 655px) {
+
+  .moduletable.notifications {
+    display: none !important;
+  }
+
+}
+
+
+/* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+@media (max-width: 481px) {
+
+
+  #my-account div.set-left,
+  #social_links_menu span,
+  #my-account .comment-img {
+    display: none;
+  }
+
+  #my-account .top-dropdown {
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  #social_links_menu,
+  #share_social_links {
+    display: none !important;
+  }
+
+}
+
+@media (max-width: 617px) {
+
+  .moduletable.notifications {
+    display: none !important;
+  }
+
+  #dash_logo {
+    min-height: auto !important;
+    margin-left: var(--padding-4) !important;
+  }
+
+  .logo-box-wrap {
+    height: auto !important;
+  }
+
+  .sideToggle {
+    padding: 20px !important;
+    height: auto !important;
+  }
+
+  #menu-toggle::before {
+    font-size: var(--font-size-3) !important;
+  }
+
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (max-width: 480px) {
+
+
+  #menu-toggle::before {
+    font-size: var(--font-size-3) !important;
+  }
+
+}
+
+.right-profile, .right-language {
+  float: none !important;
+}
+
+.set-right.right-profile {
+  position: absolute !important;
+}
+
+.right-language {
+  margin-top: 0px !important;
+  position: absolute !important;
+  right: 109px;
+  margin-right: 36px;
+  width: 100%;
+}

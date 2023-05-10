@@ -1,0 +1,156 @@
+
+	<link href="http://localhost:3000/TovutiGoogleWorkspace/signal.tovuti.io/abudhabi.css" rel="stylesheet"
+		type="text/css">
+
+:root {
+    --tov-mh-1: 45px;
+    --tov-mw-1: 45px;
+    --bs-font-sans-serif:
+    'Inter', "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tov-ml-mt-pdf: #B30B00;
+    --tov-ml-mt-video: #3970FF;
+    --tov-ml-mt-audio: #3FB561;
+    --tov-ml-mt-link: #B88149;
+    --tov-ml-mt-powerpoint: #CD421A;
+}
+
+.ml-title-bar {
+    background-color: var(--primary-color) !important;
+}
+
+.ml-card h4 {
+    margin-top: 0 !important;
+    margin-bottom: .5rem !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+}
+
+.ml-card {
+    max-width: 100% !important;
+}
+
+.ml-card-image {
+    /* background-image: url(../img/placeholders/picture-1.jpg); */
+    background-size: cover;
+    background-position: center center;
+    min-height: 200px;
+}
+
+.tov-ml-mt-pdf {
+    color: var(--tov-ml-mt-pdf);
+    background-color: var(--tov-ml-mt-pdf);
+    overflow: hidden;
+}
+
+/* .tov-ml-mt-pdf::before {
+    font-family: 'Font Awesome 5 Duotone';
+    font-size: 750px;
+    color: rgb(0, 0, 0, .2);
+    font-weight: 900;
+    content: "\f1c1";
+    position: absolute;
+    top: -550px;
+    right: 0;
+    overflow: hidden;
+} */
+
+.tov-ml-mt-video {
+    color: var(--tov-ml-mt-video);
+    background-color: var(--tov-ml-mt-video);
+    overflow: hidden;
+}
+
+.tov-ml-content {
+    width: 100%;
+}
+/* .tov-ml-mt-video::before {
+    font-family: 'Font Awesome 5 Duotone';
+    font-size: 250px;
+    color: rgb(0, 0, 0, .2);
+    font-weight: 900;
+    content: "\f1c8";
+    position: absolute;
+    top: -150;
+    right: 0;
+    overflow: hidden;
+} */
+
+.tov-ml-mt-audio {
+    color: var(--tov-ml-mt-audio);
+    background-color: var(--tov-ml-mt-audio);
+    overflow: hidden;
+}
+
+/* .tov-ml-mt-audio::before {
+    font-family: 'Font Awesome 5 Duotone';
+    font-size: 575px;
+    color: rgb(0, 0, 0, .2);
+    font-weight: 900;
+    content: "\f1c7";
+    position: absolute;
+    top: -420px;
+    right: 0;
+    overflow: hidden;
+} */
+
+.tov-ml-mt-link {
+    color: var(--tov-ml-mt-link);
+    background-color: var(--tov-ml-mt-link);
+    overflow: hidden;
+}
+
+/* .tov-ml-mt-link::before {
+    font-family: 'Font Awesome 5 Duotone';
+    font-size: 750px;
+    color: rgb(0, 0, 0, .2);
+    font-weight: 900;
+    content: "\f14c";
+    position: absolute;
+    top: -360px;
+    right: -50;
+    overflow: hidden;
+} */
+
+.tov-ml-mt-pp {
+    color: var(--tov-ml-mt-powerpoint);
+    background-color: var(--tov-ml-mt-powerpoint);
+    overflow: hidden;
+}
+
+/* .tov-ml-mt-pp::before {
+    font-family: 'Font Awesome 5 Duotone';
+    font-size: 300px;
+    color: rgb(0, 0, 0, .2);
+    font-weight: 900;
+    content: "\f1c4";
+    position: absolute;
+    top: -200px;
+    right: -15;
+    overflow: hidden;
+} */
+
+
+
+@media (min-width: 768px) {
+    .ml-card {
+        max-width: 48.6% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .ml-card {
+        max-width: 49% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ml-card {
+        max-width: 23.98% !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .ml-card {
+        max-width: 24.28% !important;
+    }
+}

@@ -2,7 +2,7 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	presets: [
-	  require('Prodkt-Tokens-Radix')
+	  require('Prodkt-Themes')
 	],
 	theme: {
 		fontFamily: {
@@ -15,5 +15,5 @@ module.exports = {
 		  pattern: /.*/,
 		},
 	  ],
-	plugins: [require("Prodkt-Tokens-Radix")],
+	plugins: [require("Prodkt-Themes")],
 }
