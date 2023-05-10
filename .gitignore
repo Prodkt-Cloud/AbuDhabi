@@ -19,5 +19,10 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-.vercel
+# .vercel
+Prodkt-Themes/
+Prodkt-Typography/
 !.vercel/output/static/_astro/index_*.css
+.vercel/output/config.json
+.vercel/project.json
+.vercel/README.txt
