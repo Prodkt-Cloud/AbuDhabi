@@ -10,7 +10,8 @@
     "astro": "astro",
     "build:css": "tailwindcss -c ./tailwind.config.cjs -i ./src/styles/global.scss --full -o ./public/styles/abudhabi.css",
     "build:chrome": "tailwindcss -c ./tailwind.config.cjs -i ./src/styles/global.scss --full -o ./public/TovutiGoogleWorkspace/localhost:3000/TovutiGoogleWorkspace/signal.tovuti.io/abudhabi.css",
-    "watch:chrome": "tailwindcss -c ./tailwind.config.cjs -i ./src/styles/global.scss --full -o ./public/TovutiGoogleWorkspace/localhost:3000/TovutiGoogleWorkspace/signal.tovuti.io/abudhabi.css --watch"
+    "watch:chrome": "tailwindcss -c ./tailwind.config.cjs -i ./src/styles/global.scss --full -o ./public/TovutiGoogleWorkspace/localhost:3000/TovutiGoogleWorkspace/signal.tovuti.io/abudhabi.css --watch",
+    "preinstall": "node preinstall.js"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.1.2",

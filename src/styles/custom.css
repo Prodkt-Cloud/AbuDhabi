@@ -739,8 +739,6 @@ div.tov-ml-content {
     -webkit-animation-play-state: paused !important;
     animation-play-state: paused !important;
 }
-  
-//   body { display: none !important; }
 
 body#top > header + div#wrapper > div#sidebar-wrapper + div#page-content-wrapper > main#main-content > div.col-md-12 > div#dash_module_3.dashboard_module > div#dash_module_title_3 + div.zone_module_container > article.moduletable > div.tov-content-container > div.tov-ml-content > div.ml-card > div.ml-card-image:before {
     position: absolute !important;
